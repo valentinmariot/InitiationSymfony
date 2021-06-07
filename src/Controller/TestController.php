@@ -11,7 +11,7 @@ class TestController extends AbstractController
 {
     /**
      * @Route("/test", name="test")
-     * */
+     */
     public function index(Request $request): Response
     {
         /*********************************************************/
@@ -29,7 +29,7 @@ class TestController extends AbstractController
 
     // /**
     //  * @Route("/test", name="test")
-    //  * */
+    //  */
     // public function index(Request $request): Response
     // {
 
@@ -66,7 +66,7 @@ class TestController extends AbstractController
 
     /**
      * @Route("/flash", name="flash")
-     * */
+     */
     public function flash(Request $request)
     {
         //1) Récupération de la session
@@ -83,7 +83,7 @@ class TestController extends AbstractController
 
     // /**
     //  * @Route("/redirection", name="redirection")
-    //  * */
+    //  */
     // public function redirection(Request $request)
     // {
     //     //1) Récupération de la session
@@ -97,7 +97,7 @@ class TestController extends AbstractController
     
      /**
      * @Route("/hello", name="hello")
-     * */
+     */
     public function hello(Request $request)
     {   
         //1) Créer un tableau dans une variable $params qui va récupérer toutes les informations
