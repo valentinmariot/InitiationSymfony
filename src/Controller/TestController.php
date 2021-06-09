@@ -120,10 +120,14 @@ class TestController extends AbstractController
         //     Hello $prenom $nom ! <br>
         //     Vous avez $age ans.
         // ");
+        
+        var_dump($_ENV['APP_AUTHOR']);
+        die();
 
         return $this->render('test_controller/hello.html.twig', [
             'nom' => $nom,
             'prenom' => $prenom,
+            'age' => $age
         ]);
 
     }

@@ -44,9 +44,18 @@ Cette option permet de défininr une expression régulière (RegEx) pour chaque 
 
 
 ## Syntaxe Twig :
-• {{...}} : utilisé pour afficher le contenu d'une variable ou le résultat de l'évaluation d'une expression
-• {%...%} : utilisé pour executer une structure de contrôle (if, foreach, ...)
-• {#...#} : utilisé pour ajouter des commentaires 'ces commentaires ne seront pas visible sur la page HTML générée)
+• *{{...}}* : utilisé pour afficher le contenu d'une variable ou le résultat de l'évaluation d'une expression (ternaire)
+• *{%...%}* : utilisé pour executer une structure de contrôle (if, foreach, ...)
+• *{#...#}* : utilisé pour ajouter des commentaires 'ces commentaires ne seront pas visible sur la page HTML générée)
+
+• Pour qu'une vue enfant hérite d'une vue parent, on utilise `{% extends 'fichier.html.twig' %}`
+• `expression(parent())` permet de garder les informations déclarés dans le layout
+•Pour définir des variables globales de Twif, il faut se rendre dans le fichier config/pacjages/twig.yaml puis définir la variable auteur comme ceci :  
+`twig :`
+    `default_path: '%kernel.project_dir%/templates'`
+    `globals:`
+        `auteur: '%env(APP_AUTHOR)%'`
+⚠️ Attention à l'indentation ⚠️
 
 
 ### Memos
