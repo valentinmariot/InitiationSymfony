@@ -16,6 +16,6 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'test' => [[], ['_controller' => 'App\\Controller\\TestController::index'], [], [['text', '/test']], [], []],
     'flash' => [[], ['_controller' => 'App\\Controller\\TestController::flash'], [], [['text', '/flash']], [], []],
-    'hello' => [[], ['_controller' => 'App\\Controller\\TestController::hello'], [], [['text', '/hello']], [], []],
+    'hello' => [['age', 'nom', 'prenom'], ['_controller' => 'App\\Controller\\TestController::hello2'], ['nom' => '[a-z]{2,50}'], [['variable', '/', '[^/]++', 'prenom', true], ['variable', '/', '[a-z]{2,50}', 'nom', true], ['variable', '/', '[^/]++', 'age', true], ['text', '/hello']], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
 ];

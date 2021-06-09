@@ -110,4 +110,22 @@ class TestController extends AbstractController
         //3) Faire un return en créant une réponse manuelle
         return new Response($string);
     }
+
+    /**
+     * @Route("/hello/{age}/{nom}/{prenom}", name="hello", requirements={"nom"="[a-z]{2,50}"})
+     */
+    public function hello2(Request $request, int $age, $nom, $prenom)
+    {
+        // return new Response ("
+        //     Hello $prenom $nom ! <br>
+        //     Vous avez $age ans.
+        // ");
+
+        return $this->render('test_controller/hello.html.twig', [
+            'nom' => $nom,
+            'prenom' => $prenom,
+        ]);
+
+    }
+
 }

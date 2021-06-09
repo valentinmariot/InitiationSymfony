@@ -15,7 +15,6 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/test' => [[['_route' => 'test', '_controller' => 'App\\Controller\\TestController::index'], null, null, null, false, false, null]],
         '/flash' => [[['_route' => 'flash', '_controller' => 'App\\Controller\\TestController::flash'], null, null, null, false, false, null]],
-        '/hello' => [[['_route' => 'hello', '_controller' => 'App\\Controller\\TestController::hello'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -34,6 +33,7 @@ return [
                     .')'
                     .'|error/(\\d+)(?:\\.([^/]++))?(*:159)'
                 .')'
+                .'|/hello/([^/]++)/([a-z]{2,50})/([^/]++)(*:206)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -43,8 +43,9 @@ return [
         101 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         114 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         124 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        159 => [
-            [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
+        159 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        206 => [
+            [['_route' => 'hello', '_controller' => 'App\\Controller\\TestController::hello2'], ['age', 'nom', 'prenom'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

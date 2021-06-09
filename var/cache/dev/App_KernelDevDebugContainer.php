@@ -16,6 +16,6 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \Container3GWTKhz\App_KernelDevDebugContainer([
     'container.build_hash' => '3GWTKhz',
-    'container.build_id' => '4741bd11',
-    'container.build_time' => 1623070891,
+    'container.build_id' => '13155798',
+    'container.build_time' => 1623230868,
 ], __DIR__.\DIRECTORY_SEPARATOR.'Container3GWTKhz');
